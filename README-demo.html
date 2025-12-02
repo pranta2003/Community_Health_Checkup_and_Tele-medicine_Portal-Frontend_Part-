@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Health Connect — README Demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{ --bg:#071020; --card:#0f1724; --muted:#a8c0d8; --accent1: #7B62FF; --accent2:#00C8FF; color-scheme: dark; }
+    body{ margin:0; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: linear-gradient(180deg,#041023 0%, #071020 60%); color:#e6f0fb; display:flex; align-items:center; justify-content:center; min-height:100vh; padding:32px; }
+    .wrap{ width:980px; max-width:95%; }
+    .badge{ text-align:center; margin-bottom:18px; }
+    .row{ display:flex; gap:18px; align-items:stretch; }
+    .card{ background:var(--card); border-radius:12px; padding:16px; box-shadow: 0 12px 40px rgba(2,8,23,.6); flex:1; overflow:hidden; }
+    img.screenshot{ width:100%; border-radius:8px; display:block; box-shadow: 0 10px 30px rgba(0,0,0,.6); }
+    .fade-in-up{ animation: fadeUp .6s cubic-bezier(.22,.9,.32,1) both; }
+    @keyframes fadeUp { from { opacity:0; transform: translateY(14px);} to { opacity:1; transform: translateY(0);} }
+    .title{ font-size:20px; font-weight:700; margin-bottom:8px; color:#eaf6ff; }
+    .muted{ color:var(--muted); font-size:13px; margin-top:6px; }
+    .center{ text-align:center; }
+    .btn{ display:inline-block; padding:10px 16px; border-radius:10px; background: linear-gradient(90deg,var(--accent1),var(--accent2)); color:white; text-decoration:none; font-weight:600; margin-top:12px; box-shadow:0 12px 36px rgba(0,0,0,.6); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="badge center">
+      <!-- show the SVG badge -->
+      <img src="assets/images/glow-badge.svg" alt="Health Connect badge" width="420" />
+    </div>
+
+    <div class="row fade-in-up">
+      <div class="card">
+        <div class="title">Hero</div>
+        <img class="screenshot" src="assets/images/hero.jpg" alt="Hero"/>
+        <div class="muted">Gradient hero with animated entry and primary CTA.</div>
+      </div>
+
+      <div class="card">
+        <div class="title">Patient dashboard</div>
+        <img class="screenshot" src="assets/images/patient-dashboard.jpg" alt="Patient Dashboard"/>
+        <div class="muted">Patient overview — appointments and teleconsultation entry.</div>
+      </div>
+    </div>
+
+    <div style="height:18px"></div>
+
+    <div class="row fade-in-up">
+      <div class="card" style="flex:1.6">
+        <div class="title">Teleconsultation</div>
+        <img class="screenshot" src="assets/images/teleconsultation.jpg" alt="Teleconsultation"/>
+        <div class="muted">Embedded Jitsi placeholder example. Use `target=\"_blank\"` fallback if iframe blocked.</div>
+        <div class="center"><a class="btn" href="#" onclick="alert('Open teleconsultation page from your app')">Open teleconsultation</a></div>
+      </div>
+
+      <div class="card" style="max-width:260px">
+        <div class="title">Quick tips</div>
+        <ul class="muted">
+          <li>Use `localStorage` fallback for demo users.</li>
+          <li>Protect routes in production.</li>
+          <li>Generate Jitsi room server-side for production tokens.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
